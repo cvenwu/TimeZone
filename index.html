@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<!--created by yangfei 2016.11.17-->
+<!--转载请说明出处-->
+<html>
+<head>
+    <title>个人测试空间</title>
+    <meta charset="utf-8"/>
+</head>
+<style type="text/css">
+/*head part*/
+.main_visual{height:219px;border-top:1px solid #d7d7d7;overflow:hidden;position:relative;}
+.main_image{height:219px;overflow:hidden;position:relative;}
+.main_image ul{width:9999px;height:219px;overflow:hidden;position:absolute;top:0;left:0}
+.main_image li{float:left;width:100%;height:219px;}
+.main_image li span{display:block;width:100%;height:219px}
+.main_image li a{display:block;width:100%;height:219px}
+.main_image li .img_1{background:url(./img_background/img_main_1.jpg) top right no-repeat}
+.main_image li .img_2{background:url(./img_background/img_main_2.jpg) -500px -115px no-repeat}
+.main_image li .img_3{background:url(./img_background/img_main_3.jpeg) center center repeat}
+.main_image li .img_4{background:url(./img_background/img_main_4.jpg) center center repeat}
+.main_image li .img_5{background:url(./img_background/img_main_5.jpg) center center no-repeat}
+
+
+div.flicking_con{position:absolute;top:190px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;
+}
+div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url(./img_background/btn_main_img.png) 0 0 no-repeat;display:block;text-indent:-1000px}
+div.flicking_con a.on{background-position:0 -21px}
+#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
+#btn_prev{background:url(./img_background/hover_left.png) no-repeat left top;left:50px;opacity:0.3;}
+#btn_next{background:url(./img_background/hover_right.png) no-repeat right top;right:50px;opacity:0.3;}
+/*head part end*/
+
+
+/*article part*/
+/*created by yangfei 2016.11.17*/
+body {
+    margin:0;
+    font:12px monospace,ËÎÌå,Î¢ÈíÑÅºÚ,Arial,sans-serif;
+
+}
+html,body {
+    -webkit-text-size-adjust:none;
+    
+}
+li,ol,ul,a,p {
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    text-decoration: none;
+}
+input {
+    vertical-align:middle;
+    font-size:100%;
+}
+em,i {
+    font-style:normal;
+}
+
+/*-----------------------Í·²¿-----------------------*/
+.top{
+    width:100%;
+    height: 219px;
+}
+.head{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+/*-----------------------ËÑË÷¿ò-----------------------*/
+.myself-wrap{
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    font-size: 1rem;
+}
+.myself-wrap .mywelcome{
+    line-height: 38px;
+    float: right;
+    color:#797171;
+    margin-right: 50px;
+}
+.myself-wrap .myselfbox{
+    float: right;
+    width: 36px;
+    padding: 0px 14px;
+    height: 34px;
+    background: url(./img_background/user.png) left 5px center no-repeat;
+    color: #999999;
+    border-radius: 25px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    overflow:hidden;
+    -o-transition: all 0.3s;
+    -webkit-transition:  all 0.3s;
+    -moz-transition: all 0.3s;
+    margin-right: 8px;
+}
+
+.myself-wrap .myselfbox:focus{
+    width: 205px;
+}
+.myself-wrap .mysearchbox{
+    float: right;
+    padding: 0px 10px;
+    width: 17px;
+    height: 32px;
+    cursor: pointer;
+    background: url(./img_background/search.png) right 5px center no-repeat;
+    color: #ccc;
+    border-radius: 25px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    outline: none;
+    overflow:hidden;
+    -o-transition: all 0.3s;
+    -webkit-transition:  all 0.3s;
+    -moz-transition: all 0.3s;
+    margin-right: 180px;
+}
+.myself-wrap .mysearchbox:focus{
+    width: 180px;
+    padding-right: 35px;
+}
+.head .saying{
+    width: 370px;
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 0.8rem;
+    font-family:"Microsoft YaHei";    
+    color: #f7eaea;    
+}
+.head .portrait{
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    float: left;
+    width: 190px;
+    height: 190px;
+    margin: 15px;
+    border: 1px #999999 solid;
+    text-align: center;
+    animation:rotate 100s linear infinite;
+    -webkit-animation:rotate 100s linear infinite;
+    -moz-animation:rotate 100s linear infinite;
+    -o-animation:rotate 100s linear infinite;
+    -ms-animation:rotate 100s linear infinite;
+}
+@keyframes rotate{
+    from{transform:rotate(0deg);   }
+    to{transform:rotate(360deg);}
+}
+-webkit-@keyframes rotate{
+    from{transform:rotate(0deg);   }
+    to{transform:rotate(360deg);}
+}
+-moz-@keyframes rotate{
+    from{transform:rotate(0deg);   }
+    to{transform:rotate(360deg);}
+}
+-o-@keyframes rotate{
+    from{transform:rotate(0deg);   }
+    to{transform:rotate(360deg);}
+}
+-ms-@keyframes rotate{
+    from{transform:rotate(0deg);   }
+    to{transform:rotate(360deg);}
+}
+
+.head .portrait span{
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.head .portrait img{
+    width: 94%;
+    height: 94%;
+    vertical-align: middle;
+}
+
+/*-----------------------µ¼º½À¸-----------------------*/
+.content-nav{
+    background-color: #F0F4F0;
+    overflow: hidden;
+}
+.content-nav ul{
+    width:1000px;
+    margin: auto;
+    overflow: hidden;
+    height: 70px;
+
+}
+.content-nav ul li{
+    padding-top: 8px;
+    float: left;
+    width:20% ;
+
+
+
+
+     text-align: center;
+    font-size: 1.2rem;
+    height:62px;
+}
+.content-nav ul li a{
+    color: #22BC81;
+    vertical-align: middle;
+}
+.content-nav ul li img{
+    width: 25px;
+    height: 25px;
+}
+.content-nav ul li:hover{
+    background-color: #E4ECE8;
+    border-top: 1px solid #22BC81;
+}
+.content-nav ul li:hover a{
+    color: #696D71;
+    display: block;
+    width: 100%;
+}
+.content-nav ul li:hover img{
+    filter:grayscale(100%);
+    -webkit-filter:grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter:grayscale(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter:grayscale(1)
+}
+/*-----------------------¸öÈËµµ°¸-----------------------*/
+.mainbg1
+{
+    width: 100%;
+    background-color: #E4ECE8;
+}
+.content-intro{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    color:#000;
+}
+.content-intro .content-title{
+    margin-bottom: 2px;
+}
+
+.sidetop{
+    width: 100%;
+    height: 110px;
+}
+.sidetop li{
+    width: 20%;
+    float: left;
+    font-size: 1.1rem;
+    text-align: center;
+    position: relative;
+}
+.sidetop li ul p{
+    font-size: 0.9rem;
+}
+li hr{
+    width: 1px;
+    height: 27px;
+}
+.sidetop li ul {
+    position: absolute;
+    left: 25px;
+    top: 28px;
+    vertical-align: middle;
+    display: none;
+}
+
+.sidebottom{
+    width:100%;
+    position: relative;
+}
+.sidebottom .fir-bu{
+    position: absolute;
+    right: 130px;
+    top: 35px;
+    width: 15%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    color: #FF9933;
+    border: 1px solid #ffb266;
+    cursor: default;
+}
+.sidebottom .sec-bu{
+    position: absolute;
+    left: 130px;
+    bottom: 35px;
+    width: 15%;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    text-align: center;
+    color: #1f991f;
+    border: 1px solid #52cc52;
+    cursor: default;
+}
+.intro-wrapper .sidebottom table{
+    width: 100%;
+}
+.intro-wrapper .sidebottom td{
+    font-size: 1.1rem;
+    color:#FF9933;
+}
+.intro-wrapper .sidebottom .sec-hob{
+    color: #1f991f;
+}
+.intro-wrapper .sidebottom table .intro-tit{
+    font-size: 1.3rem;
+}
+
+
+/*-----------------------Éú»î·ç¾°-----------------------*/
+.mainbg2{
+    width: 100%;
+    
+}
+.content-life{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.content-life .content-title {
+    margin-bottom: 2px;
+}
+.current{
+    background: url(./img_background/le-2.png) no-repeat left 30px top 38px, url(./img_background/le-2.png) no-repeat right 30px top 38px;
+    color: #1f991f;
+}
+.lifetime{
+    width: 100%;
+}
+.lifetime li{
+    width: 20%;
+    float: left;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.content-life .sidetop li ul {
+    left: 135px;
+    top: 28px;
+}
+.content-life .lifetime li span{
+    font-size:0.9rem;
+}
+#tag{
+    overflow:hidden;    
+}
+#tag li{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#tag li span{
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+}
+#tagContent div{
+    width:1000px;
+    overflow: hidden;
+    display:none;
+}
+#tagContent .lifecon1,.lifecon2,.lifecon3,.lifecon4,.lifecon5{
+    margin-top: 20px;
+    margin:0 auto;
+}
+#tagContent p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;    
+}
+
+#tagContent .life-pic{
+    width: 300px;
+    height: 100px;
+    margin-bottom:20px;      
+    border:1px solid #9248bc;  
+    box-shadow: 0 0 5px #333;
+    position: relative;
+    text-align: center;
+    float: left;
+    transition:all 0.3s ease-in-out;   
+ }
+ .life-pic:nth-child(3){
+     margin-left:40px;
+ }
+.life-pic:nth-child(4){
+     margin-left:40px;
+ }
+.life-pic:nth-child(6){
+     margin-left:40px;
+ }
+.life-pic:nth-child(7){
+     margin-left:40px;
+ }
+#tagContent .life-pic:hover{
+transform:translate3d(0,-5px,0);
+-ms-transform:translate3d(0,-5px,0);
+-moz-transform:translate3d(0,-5px,0);
+-webkit-transform:translate3d(0,-5px,0);
+-o-transform:translate3d(0,-5px,0);
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+}
+/*-----------------------Ê±¼äÖá-----------------------*/
+.mainbg3
+{
+    width: 100%;
+    background-color: #E4ECE8;
+}
+.content-diary a {
+    color:#737373;
+    text-decoration:none;
+}
+.content-diary a:hover {
+    color:#fd8609;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-diary {
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.content-diary .diary-wrapper {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+.content-title {
+    width: 100%;
+    border-bottom: 1px solid #a6a6a6;
+    text-align: left;
+    line-height: 3rem;
+    color: #6f7b93;
+    font-size: 1.5rem;    
+    /*padding-left:1%;*/
+}
+.content-diary .diary-main {
+    background: url(./images/line-bg2.png) repeat-y 259px 0;
+}
+.content-diary .diary-main .diary-year {
+    position: relative;
+}
+.content-diary .diary-main .diary-year .years {
+    height: 40px;
+    width: 165px;
+    padding-right: 30px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: right;
+}
+.content-diary .diary-main .diary-year .years a {
+    color: #6f7b93;
+}
+.content-diary .diary-main .diary-year .years i{
+    display:block;
+    position:relative;
+    height:0;
+    width:0;
+    left:190px;
+    top:-22px;
+    border-width:8px;
+    border-style:solid;
+    border-color:#6f7b93 transparent transparent transparent;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
+    -webkit-transform-origin:6px 3px;
+    -moz-transform-origin:6px 3px;
+    -ms-transform-origin:6px 3px;
+    -o-transform-origin:6px 3px;
+    transform-origin:6px 3px
+}
+.content-diary .diary-main .diary-year .diary-list{
+    padding:8px 0;
+    position:relative;
+    overflow:hidden;
+    -webkit-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -moz-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -ms-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    -o-transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s;
+    transition:height 1s cubic-bezier(0.025,0.025,0.000,1.115),opacity 1s
+}
+.content-diary .diary-main .diary-year .diary-list ul {
+    bottom: 0;
+}
+.content-diary .diary-main .diary-year .diary-list ul li {
+    background: url("./images/circle3.png") no-repeat 245px 6px;
+    color: #000;
+}
+.content-diary .diary-main .diary-year .diary-list ul li.highlight {
+    background: url("./images/circle2.png") no-repeat 249px 3px;;
+}
+.cls {
+    zoom: 1;
+}
+.cls:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.content-diary .diary-main .diary-year .diary-list ul li.highlight .date, .content-diary .diary-main .diary-year .diary-list ul li.highlight .intro {
+    color: #ec6a13;
+}
+.content-diary .diary-main .diary-year .diary-list ul li .date,.content-diary .diary-main .diary-year .diary-list ul li .version{
+    float:left;
+    display:block;
+    clear:left;
+    width:200px;
+    line-height:24px;
+    text-align:right
+}
+.content-diary .diary-main .diary-year .diary-list ul li .date{
+    font-size:18px;
+    line-height:32px;
+    color:#737373
+}
+.content-diary .diary-main .diary-year .diary-list ul li .intro, .content-diary .diary-main .diary-year .diary-list ul li .more {
+    float: left;
+    width: 600px;
+    margin-left: 120px;
+    line-height: 20px;
+
+}
+.content-diary .diary-main .diary-year .diary-list ul li .more{
+    padding-bottom:15px;
+}
+.content-diary .diary-main .diary-year .diary-list ul li .more p{
+    margin: 5px 0px;
+    font-size: 0.9rem;
+}
+
+.content-diary .diary-main .diary-year .diary-list ul li .intro {
+    font-size: 1.1rem;
+    line-height: 27px;
+    color: #1f991f;
+}
+/*Èý½ÇÐý×ª*/
+.content-diary .diary-wrapper:first-child .diary-main .diary-year.close .years i{
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg)
+}
+.content-diary .diary-wrapper:first-child .diary-main .diary-year.close .diary-list{
+    opacity:0;
+    height:0!important;
+}
+.ie7 .content-diary .diary-main .diary-year .years i{
+    left:40px
+}
+
+.mainbg4{
+    width: 100%;
+    background-color: #F0F4F0;
+}
+.content-words{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/*·çÇÙ*/
+#demo{
+    width:998px;
+    height:500px;
+    border:1px solid #CCC;
+    overflow:hidden;
+}
+#demo li{
+    float:left;
+    position:relative;
+    width:80px;
+    height:100%;
+    overflow:hidden;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;opacity:0.5;cursor:pointer;
+}
+/*#demo li div{position:absolute;width:100%;height:50px;line-height:50px;background:#000;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;bottom:0;left:0;display:none;text-align:center;}*/
+#demo li .d1-tit{
+    position:absolute;
+    width:50px;
+    height:200px;
+    top:35%;
+    left:15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#demo li div a{
+    color:#FFF;
+    text-decoration:none;
+}
+#demo li div a:hover{
+    color:#F00;
+    text-decoration:none;
+}
+#demo li:first-child{
+    width:758px;
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    opacity:1;
+}
+#demo li:first-child div{
+    display:block;
+}
+.d1{
+    width:758px;
+    height:500px;
+    background: #7fd49b;
+}
+.d1 .d1-1{
+    color:#174d29;
+}
+.d1 .d1-con{
+    text-align:justify;
+    text-justify:inter-ideograph;
+    padding-right: 65px;
+    position: absolute;
+    left: 110px;
+    top:50px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color:#174d29;
+}
+.d1 .d1-con p{
+    text-indent: 2em;
+}
+
+.d2{
+    width:758px;
+    height:500px;
+    background: #FFCC99;
+}
+.d2 .d2-2{
+    color:#a66b32;
+}
+.d2 .d2-con{
+    text-align:justify;
+    text-justify:inter-ideograph;
+    padding-right: 60px;
+    position: absolute;
+    left: 110px;
+    top:65px;
+    font-size:1rem;
+    line-height: 1.5rem;
+    color: #66411f;
+}
+.d2 .d2-con p{
+    text-indent: 2em;
+    padding-bottom: 10px;
+}
+.d3{
+    width:758px;
+    height:500px;
+    background: #f0ef93;
+}
+.d3 .d3-3{
+    color: #9c9b30;
+}
+.d3 .d3-con{
+    position: absolute;
+    left: 185px;
+    top:60px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #4d4c18;
+}
+.d3 .d3-con p{
+    font-size: 1.2rem;
+    padding: 15px 0px 5px 0px;
+}
+.d4{
+    width:758px;
+    height:500px;
+    background: #f28e3d;
+}
+.d4 .d4-4{
+    color: #9d5114;
+}
+.d4 .d4-con{
+    position: absolute;
+    left: 140px;
+    top:65px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    color: #4d280a;
+    text-align: center;
+}
+.d4 img{
+    padding:20px 20px;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+.d4 img:hover{
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+
+/*»Øµ½¶¥²¿*/
+.totop{
+    position:fixed;
+    bottom:40px;
+    right:40px;
+    width:50px;
+    height:50px;
+    display:none;
+}
+.totop a,.totop a:link{
+    background-image:url(./img_background/sun2.png);
+    background-repeat:no-repeat;
+    width:50px;
+    height:50px;
+    outline:none;
+    display:inline-block;
+    background-size: cover;
+}
+.totop a:hover{
+    background-image:url(./img_background/sun4.png);
+    background-repeat:no-repeat;
+    width:50px;
+    height:50px;outline:none;
+}
+#footer{
+    display:inline-block;
+    width:200px;
+    height:20px;    
+    margin-left:37%;   
+}
+#font{
+    display:inline-block;
+    font-size:15px;
+}
+/*hover xiaoguo*/
+.btn-11:before,
+.btn-11:after {
+  z-index: -1;
+}
+.btn-11 {
+  display:block;
+  position: relative;
+  color: #9248bc;
+  text-align:center;
+  overflow: hidden;
+  width:  100%;
+  height:100%;  
+}
+.btn-11 a {
+  display:block;
+  text-decoration: none;
+  line-height: 100px;
+  color: #9248bc;
+  
+}
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 380px;
+    height: 380px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 380px;
+    height: 380px;
+  }
+}
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 380px;
+    height: 380px;
+  }
+}
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 380px;
+    height: 380px;
+  }
+}
+
+.btn-11:before, .btn-11:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #7f28b0;
+  border-radius: 50%;
+}
+.btn-11:before {
+  left: -20px;
+ 
+          transform: translate(-50%, -50%);
+  /*     animation: criss-cross-left 0.8s reverse; */
+}
+.btn-11:after {
+  right: -20px;
+ 
+          transform: translate(50%, -50%);
+  /*     animation: criss-cross-right 0.8s reverse; */
+}
+.btn-11:hover:before, .btn-11:hover:after {
+  /*       @include size($btn-width); */
+}
+.btn-11:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+          animation: criss-cross-left 0.8s both;
+}
+.btn-11:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+          animation: criss-cross-right 0.8s both;
+}
+.btn-11:hover a{
+  color:#fff;
+}   
+
+/*article end*/
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<body>
+<!--<object style="border:0px" type="text/x-scriptlet" data="head.html" width=100% height=500px> </object>-->
+
+<div class="top">
+    <div class="myself-wrap" style="position:absolute;z-index:99;">
+        <input class="mysearchbox" type="text" maxlength="100">
+        <input class="myselfbox" type="button" maxlength="100" value="     Fei Yang zhizhu">
+        <div class="mywelcome">
+            欢迎来到 Yang 的个人空间
+        </div>
+    </div>
+    <div class="head" style="position:absolute;z-index:99;left:10px;top:30px">
+        <div class="saying">
+          “我不相信高台的成功者，因为这条路就会被堵死，还有时间，唯有击败强者。”
+        </div>
+        <div class="portrait">
+            <span></span><img src="portrait1.jpg">
+        </div>
+    </div>
+
+<div class="main_visual">
+    <div class="flicking_con">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+    <div class="main_image">
+        <ul>
+            <li><span class="img_3"></span></li>
+            <li><span class="img_4"></span></li>
+            <li><span class="img_1"></span></li>
+            <li><span class="img_2"></span></li>
+            <li><span class="img_5"></span></li>
+        </ul>
+        <a href="javascript:;" id="btn_prev"></a>
+        <a href="javascript:;" id="btn_next"></a>
+    </div>
+</div>
+</div>
+
+<div class="content-nav">
+    <ul class="nav">
+        <li><a href="index.html"><img src="images/home.png"><br>首页</a></li>
+        <li><a href="#m-info"><img src="images/info.png"><br>个人档案</a></li>
+        <li><a href="#m-life"><img src="img_background/view.png"><br>前端项目</a></li>
+        <li><a href="#m-diary"><img src="images/dairy.png"><br>更新日志</a></li>
+        <li><a href="#m-word"><img src="images/dia.png"><br>一些话</a></li>
+    </ul>
+</div>
+<div class="mainbg1">
+    <a name="m-info"></a>
+    <div class="content-intro">
+        <div class="intro-wrapper">
+            <div class="content-title">个人档案</div>
+            <div class="sidetop">
+                <ul>
+                    <li onmousemove="showpic(this)" onmouseout="hidepic(this)">
+                        <hr>1991
+                        <ul>
+                            <img src="images/born.png">
+                            <p>出生</p>
+                        </ul>
+                    </li>
+                    <li onmousemove="showpic(this)" onmouseout="hidepic(this)">
+                        <hr>1999
+                        <ul>
+                            <img src="images/child.jpg">
+                            <p>小学</p>
+                        </ul>
+                    </li>
+                    <li onmousemove="showpic(this)" onmouseout="hidepic(this)">
+                        <hr>2005
+                        <ul>
+                            <img src="images/middle.jpg">
+                            <p>中学</p>
+                        </ul>
+                    </li>
+                    <li onmousemove="showpic(this)" onmouseout="hidepic(this)">
+                        <hr>2010
+                        <ul>
+                            <img src="./img_background/university.jpg">
+                            <p>大学</p>
+                        </ul>
+                    </li>
+                    <li onmousemove="showpic(this)" onmouseout="hidepic(this)">
+                        <hr>2014
+                        <ul>
+                            <img src="./img_background/work.jpg">
+                            <p>工作</p>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebottom">
+                <a class="fir-bu">基本信息</a>
+                <a class="sec-bu">兴趣爱好</a>
+                <table cellpadding="6">
+                    <tr>
+                        <td>姓名:</td>
+                        <td>武侯之意</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>别名:</td>
+                        <td>武侯</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>出生日期: </td>
+                        <td>1991.08.23 </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>出生地:</td>
+                        <td>湖北</td>
+                    </tr>
+                    <tr>
+                        <td class="sec-hob">学知识</td>
+                        <td class="sec-hob">看书 / 打代码</td>
+                        <td></td>
+                        <td></td>
+                        <td>星座:</td>
+                        <td>猜？？？</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sec-hob">去旅游</td>
+                        <td class="sec-hob">未知</td>
+                        <td></td>
+                        <td></td>
+                        <td>血型:</td>
+                        <td>0型血</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="sec-hob">关在家LOL？</td>
+                        <td class="sec-hob">额</td>
+                        <td></td>
+                        <td></td>
+                        <td>职业:</td>
+                        <td>Web前端</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="sec-hob">听音乐</td>
+                        <td class="sec-hob">流行音乐</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="sec-hob">做运动</td>
+                        <td class="sec-hob">篮球、乒乓球</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="sec-hob">还是代码</td>
+                        <td class="sec-hob">就是代码</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="sec-hob">敲代码</td>
+                        <td class="sec-hob">睡觉 / 敲代码！！</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!------------------------前端代码------------------------>
+<div class="mainbg2">
+    <a name="m-life"></a>
+    <div class="content-life">
+        <div class="intro-wrapper">
+            <div class="content-title">前端项目</div>
+            <div class="lifetime">
+                <ul id="tag">
+                    <li>
+                        <hr><span>移动前端</span>
+                    </li>
+                    <li>
+                        <hr><span>PC端开发</span>
+                    </li>
+
+                    <li>
+                        <hr><span>前端资源</span>
+                    </li>
+                    <li>
+                        <hr><span>开发框架</span>
+                    </li>
+                    <li>
+                        <hr><span>HTML5<br>&CSS3</span>
+                    </li>
+                </ul>
+                <div id="tagContent">
+                    <div class="lifecon1">
+                        <p>-- Web与移动端开发心得 --<br>
+                            webApp是大的方向，自己要努力向前迈进了，有新的体会，也有新的分享。</p>
+                        <ul class="life-pic" >
+                    <i class="btn-11"><a href="https://github.com/wuhou123/">FrameWork7App框架</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="https://github.com/wuhou123/textdemo">fiddler4手机抓包调试工具文件</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="http://wuhou123.oschina.io/myapp/">仿微信应用</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">待开发</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">待开发</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">待开发</a></i>
+                        </ul>
+
+                    </div>
+                    <div class="lifecon2">
+                        <p>-- PC端开发工具 --<br>
+                            自己学习和找到的开发工具，还不错。</p>
+                        <ul class="life-pic" >
+                    <i class="btn-11"><a href="./jquery&waterfall/index.html">瀑布流+ajax动态加载</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./骑行/index.html">响应式网站页面</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="https://github.com/wuhou123/textdemo/tree/master/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6">apache_tomcat7</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./baidu_map/map.html">百度地图api，异步数据加载</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                    </div>
+
+                    <div class="lifecon3">
+                        <p>-- 前端资料文档 --<br>
+                            汇集左右插件和组件工具，图片优化压缩，代码检测和优化压缩，书籍文档。</p>
+                         <ul class="life-pic" >
+                    <i class="btn-11"><a href="https://github.com/wuhou123">AngularJS</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="https://tinypng.com/">图片优化压缩</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="http://www.iconfont.cn/">图标字体（支持在线制作）</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./webtotal/index.html">前端资源汇集（一）</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./webtotal/index2.html">前端资源汇集（二）</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./webtotal/index3.html">前端资源汇集（三）</a></i>
+                        </ul>
+                    </div>
+
+                    <div class="lifecon4">
+                        <p>-- 开发框架资源 --<br>
+                            前端开发框架学习和使用，资源整理。</p>
+                        <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">Collision</a></i>
+                        </ul>
+              
+                    </div>
+
+                    <div class="lifecon5">
+                        <p>-- 最新的H5和CSS3学习，关于一些效果例子。 --<br>
+                            每天都学习一点，大神博客以及看到的效果展示，just do it。</p>
+                        <ul class="life-pic" >
+                    <i class="btn-11"><a href="./xialacaidan.html">css3下拉菜单</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./下拉刷新/index.html">H5移动端下拉加载</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./echarts/nav.html">echarts图表制作</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="./pages/classic.html">前端处理分页（非异步加载分页）</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">敬请期待</a></i>
+                        </ul>
+                                                <ul class="life-pic" >
+                    <i class="btn-11"><a href="#">敬请期待</a></i>
+                        </ul>
+                
+                    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!------------------------更新日志------------------------>
+<div class="mainbg3">
+    <a name="m-diary"></a>
+    <div class="content-diary">
+        <div class="diary-wrapper">
+            <div class="content-title">更新日志</div>
+            <div class="diary-main">
+<!--2017年-->
+<div class="diary-year">
+                    <div class="years">
+                        <a href="#">2017年<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul> 
+                            
+                            <li class="cls highlight">
+                                <p class="date">4月1日</p>
+                                <p class="intro">blog要改版了</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>要抽时间把主页改版了，一直没时间，好吧，程序员结婚了，怎么破？</p>
+                                </div>
+                            </li>                           
+                            <li class="cls highlight">
+                                <p class="date">1月18日</p>
+                                <p class="intro">新年第一更</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>今天年会，还有bug没改，新年新气象吧，要赶紧努力去完成自己的目标了，2016年总结也要开始写了，技术的积累也要总结了，前段时间的项目上线，博客开始更新吧！祝福所有小伙伴都天天开心。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+</div>
+<!--2016年-->
+<div class="diary-year">
+                    <div class="years">
+                        <a href="#">2016年<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul>                            
+                            <li class="cls">
+                                <p class="date">12月23日</p>
+                                <p class="intro">圣诞节怎么过？</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>不知道自己变忙了，还是什么，笔记停更，github停登，希望自己赶紧好起来，慢慢把技术积累上去吧，那个她，圣诞节快乐。。。。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">11月19日</p>
+                                <p class="intro">开始调试（只有此段是真实，next just fabricate）</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>开始启程，还在调试阶段，后面会慢慢变好。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">10月10日</p>
+                                <p class="intro">考研正式网上报名</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>选定专业和学校,内心很忐忑。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">9月25日</p>
+                                <p class="intro">考研预报名</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>正值学校安排去高淳培训，没有电脑，填写资料的过程很艰苦。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">9月15日</p>
+                                <p class="intro">高淳培训</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>学校在这个时候组织高淳培训java，内心是拒绝的，但是没办法。</p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">6月12号</p>
+                                <p class="intro">拿到驾照</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>整个去驾校练车的过程是无语的，以至于后来见到教练，脚都是软的。</p>
+                                    <p>如果再给我个机会去练车，我是万万不愿意的。特别崩溃。</p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">3月10日</p>
+                                <p class="intro">决定考研</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>考研一直是我上大学的梦想，只是随着时间的推移，加上自己的惰性，有点忘记而已。父母是一直鼓励我考研的，我只是怕我意志不坚定。</p>
+                                    <p>突然做了这个决定，内心一直很慌，我知道我面前的是一条怎么样的路，我经常问自己这个决定是对的吗？</p>
+                                </div>
+                            </li>
+
+                            <li class="cls">
+                                <p class="date">1月</p>
+                                <p class="intro">总在不经意的年生。回首彼岸，纵然发现光景绵长。</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>何如薄幸锦衣郎，比翼连枝当日愿。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<!--2016end-->
+
+
+
+                <div class="diary-year">
+                    <div class="years">
+
+
+
+                        <a href="#">2015年<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul>
+                            <li class="cls highlight">
+                                <p class="date">9月29日</p>
+                                <p class="intro">突然问自己还想考研吗？</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>2015年的考研失败，更多的是自我的不努力，自我的放弃。考研不难，还是要看自己的努力程度。没有后不后悔，只有甘心不甘心。</p>
+                                    <p>这个想法会经常冒出来，说到底，其实我自己也不知道。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">9月23日</p>
+                                <p class="intro"> 转正。</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p> 三个月试用期结束，转正也很顺利。没有想象中的要步步为营，比想象更简单一点。</p>
+                                </div>
+                            </li>
+                            <li class="cls  highlight">
+                                <p class="date">6月23日</p>
+                                <p class="intro">开启工作生涯。</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p> 俗话说，一花一世界，一叶一追寻。接下来就是追寻我的自我养活能力了。</p>
+                                    <p>人人都有第一次，我相信我会努力做好。 </p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">6月20日</p>
+                                <p class="intro">结束大学生活</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>拿到学校的毕业证书和学位证书，内心其实是很复杂的，没有想象中的欣喜，也没有想象中的失落，平平淡淡，安然走过。</p>
+                                    <p>在任何一个地方待久了，走的时候都是舍不得的，人生有很多舍不得的地方，所以要习惯。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">6月18日</p>
+                                <p class="intro">公开答辩</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>当我被选为公开答辩手的时候，我内心是痛的，因为我的设计几斤几两，我懂。在当今这个网络发达的时代，大家都懂的。</p>
+                                    <p>我很紧张，吃不好睡不好，而且论文还出了很大的问题，我感觉我都要瘫痪了。不过，幸亏努力是有结果的。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">6月19日</p>
+                                <p class="intro">收到入职offer</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>意料之中的事，但还是有点欣喜，收拾收拾，准备入职。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">6月09日</p>
+                                <p class="intro">达内培训结束</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>为期四个多月的培训结束了，接下来就是投简历面试找工作。</p>
+                                    <p>这个过程，就是完全靠自己了。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">02月01日</p>
+                                <p class="intro">达内UI设计正式开始培训</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>包括四个阶段的学习，分别是GUI（图形界面设计），AUI（传统美术），WUI（WEB界面设计），MUI（移动设备界面设计）</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">01月25日</p>
+                                <p class="intro">开始达内训练营</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>没想参加，但是多学点总是好的。</p>
+                                    <p>考研结果还没出来，但是我知道我非常没戏了，所以知不知道结果，都是一样的，我已经放弃等待结果了。我只能往前看，希望越来越好。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="diary-year">
+                    <div class="years">
+                        <a href="#">2014年<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul>
+                            <li class="cls">
+                                <p class="date">12月27日</p>
+                                <p class="intro">考研初试</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>考试很煎熬，但内心很淡然，知道考不上了，但是不会放弃。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">10月10日</p>
+                                <p class="intro">考研正式网上报名</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>选定专业和学校,内心很忐忑。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">9月25日</p>
+                                <p class="intro">考研预报名</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>正值学校安排去高淳培训，没有电脑，填写资料的过程很艰苦。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">9月15日</p>
+                                <p class="intro">高淳培训</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>学校在这个时候组织高淳培训java，内心是拒绝的，但是没办法。</p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">6月12号</p>
+                                <p class="intro">拿到驾照</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>整个去驾校练车的过程是无语的，以至于后来见到教练，脚都是软的。</p>
+                                    <p>如果再给我个机会去练车，我是万万不愿意的。特别崩溃。</p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">3月10日</p>
+                                <p class="intro">决定考研</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>考研一直是我上大学的梦想，只是随着时间的推移，加上自己的惰性，有点忘记而已。父母是一直鼓励我考研的，我只是怕我意志不坚定。</p>
+                                    <p>突然做了这个决定，内心一直很慌，我知道我面前的是一条怎么样的路，我经常问自己这个决定是对的吗？</p>
+                                </div>
+                            </li>
+
+                            <li class="cls">
+                                <p class="date">1月</p>
+                                <p class="intro">总在不经意的年生。回首彼岸，纵然发现光景绵长。</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>何如薄幸锦衣郎，比翼连枝当日愿。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="diary-year">
+                    <div class="years">
+                        <a href="#">2013年<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul>
+                            <li class="cls">
+                                <p class="date">9月6日</p>
+                                <p class="intro">英语六级过了</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>查成绩查的晚，而且本身也没报多大的希望，得知这个结果的时候，还是高兴的。</p>
+                                </div>
+                            </li>
+                            <li class="cls highlight">
+                                <p class="date">8月18</p>
+                                <p class="intro">脚受伤</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>自成年以来，身体一直没受过什么伤，这次算是意外之祸。</p>
+                                    <p>医生建议把指甲拔掉，吓了我很多跳。我不肯，所以一直发炎流血，反反复复，很久才好。那时候，经常能听见我家杀猪般的叫声，因为我妈在给我涂酒精，N级痛，真的是十指连心。</p>
+                                </div>
+                            </li>
+                            <li class="cls">
+                                <p class="date">7月23日</p>
+                                <p class="intro">暑假工</p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>第一次正式的暑假工，之前都是零零散散的兼职。虽然暑假工也是兼职，但是时期要稍微长些，意义自然不一样，希望我能成长些。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="diary-year">
+                    <div class="years">
+                        <a href="#">2012年以前<i></i></a>
+                    </div>
+                    <div class="diary-list">
+                        <ul>
+                            <li class="cls">
+                                <p class="date">&nbsp;</p>
+                                <p class="intro">俱往矣，数风流人物，还看今朝。 </p>
+                                <p class="version">&nbsp;</p>
+                                <div class="more">
+                                    <p>记忆总是散落的，没有记录，还真是记不住的，日子太长，往前的只能简单记忆回想了。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mainbg4">
+    <a name="m-word"></a>
+    <div class="content-words">
+        <div class="words-wrapper">
+            <div class="content-title">一些话</div>
+            <ul id="demo">
+                <li>
+                    <ul class="d1">
+                        <div class="d1-tit d1-1">
+                            我<br>想<br>说<br>的<br>话
+                        </div>
+                        <div class="d1-con">
+                           
+                            <p>现在技术更新很快，所以眼光要放远，要随时让自己处于虚心学习的状态。不要学会div+css,就觉得很了不起，就不想学其它的技术了，懂div+css的人太多了。现在网上各种教程资料，所以多学点东西，提升自我价值，没错的。</p>
+                            <p>有的人觉得自己学好了，已经很厉害了。html+css够扎实？javascrip能灵活运用？使用jQuery一路到头？DOM，AJAX,JSON,DHTML，有接触？后台一些基本语言，了解？Web前端是永无止境的，没有人能真正的学到头。不要怕累，不要怕伤眼，不要怕动脑，知识是死的，方式是活的，已经爬到食物链的顶端，还有什么是解决不了的吗？相信自己。</p>
+                            <p>其实，还是看你自己。</p>
+                            <p>害怕这样的一种状态。早上起不来，早饭吃不好，麻木的上班，渴望下班，下班后就是脱离任何思想，看电视玩手机，还要熬夜玩，各种拖延症。第二天又是这样，循环不断。我们现在还年轻，有很多的精力，我们需要更多的投资自己。</p>
+                            <p>别在最该奋斗的日子，选择了安逸和享受。</p>
+                        </div>
+                    </ul>
+                    <!--<div><a href="http://www.mycodes.net">标题1</a></div>-->
+                </li>
+                <li>
+                    <ul class="d2">
+                        <div class="d1-tit d2-2">
+                            激<br>励<br>你<br>自<br>己
+                        </div>
+                        <div class="d2-con">
+                            <p>放下你的浮躁，放下你的懒惰，放下你的三分钟热度，闭上你什么都想聊两句的嘴巴，静下心来好好做你该做的事。你的努力是唯一能让你站稳脚跟的依靠。</p>
+                            <p>做你想做的，趁阳光正好。去追逐梦想，趁还年轻。不浪费时间，不挥霍时光，不沉迷过去，不恐惧未来。努力从来不会白费，今日播下的种子，正在你看不见、想不到的某处悄悄地发芽。</p>
+                            <p>你想要好的成绩，但是你不去学习；你想要富裕的生活，但是你不去拼搏奋斗；你想要健康的身体，但是你没能坚持锻炼；你想要称心如意的生活，但是你从未真正的改变过自己。你尽力了，才有资格说自己运气不好。</p>
+                            <p>水再浑浊，只要长久沉淀，依然会分外清澄；人再愚钝，只要足够努力，一样能改写命运，不要愤懑起点太低，那只是我们站立的原点。人生是一场漫长竞赛，有些人笑在开始，有些人却赢在最后。</p>
+                            <p>世界上最难的事，莫过于在热闹之中按兵不动，在诱惑面前不忘初心，别偏激，按兵不动不是让你停滞不前，不忘初心也并非不可以放眼未来，冷静，不是迟钝，沉默，不代表妥协。</p>
+
+                        </div>
+                    </ul>
+                    <!--<div><a href="2">标题2</a></
+
+
+
+                    div>-->
+                </li>
+                <li>
+                    <ul class="d3">
+                        <div class="d1-tit d3-3">
+                            推<br>荐<br>的<br>书<br>籍
+                        </div>
+                        <div class="d3-con">
+                            <p>入门：</p>
+                            《深入浅出JavaScript》-- Christion Heilmann<br>
+                            《JavaScript DOM编程艺术》-- Jeremy Keith<br>
+                            《JavaScript DOM高级程序设计》-- Jeffrey Sambells<br>
+                            <p>进阶：</p>
+                            《ppk谈JavaScript》-- Peter-PaulKoch<br>
+                            《精通JavaScript》-- JohnResig<br>
+                            《JavaScript高级程序设计》-- Nicholas C.Zakas<br>
+                            <p>高级：</p>
+                            《JavaScript语言精粹》-- Douglas Crockford<br>
+                            《JavaScript设计模式》-- Rossharmes<br>
+                            《Secrets of the JavaScript Ninja》-- JohnResig<br>
+                            《高性能JavaScript》-- NicholasC.Zakas
+                        </div>
+                    </ul>
+                    <!--<div><a href="3">标题3</a></div>-->
+                </li>
+                <li>
+                    <ul class="d4">
+                        <div class="d1-tit">
+                            要<br>靠<br>你<br>自<br>己
+                        </div>
+                        <div class="d4-con">
+                            <img class="mind1" src="images/mind-1.png">
+                            <img class="mind2" src="images/mind-2.png">
+                            <p>Do what you can, with what you have, where you are.<br>Life always has two sides, choose yours.</p>
+                        </div>
+
+                    </ul>
+                    <!--<div><a href="3">标题4</a></div>-->
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+    <div class="totop"><a></a>
+    </div>
+<div style="text-align:center;">
+</div>
+<div id="footer">
+    
+</div>
+<div id="font">©2016YANGFEI <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=975694783&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:975694783:51" alt="点击这里给我发消息" title="点击这里给我发消息"/ style="vertical-align:middle"></a></div>
+<div id="uyan_frame"></div>
+
+
+
+
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2132803"></script>
+<script type="text/javascript">
+    /* 
+
+
+
+jquery.event.drag.js ~ v1.5 ~ Copyright (c) 2008, Three Dub Media (http://threedubmedia.com)  
+
+
+
+Liscensed under the MIT License ~ http://threedubmedia.googlecode.com/files/MIT-LICENSE.txt
+
+
+
+*/
+(function(E){E.fn.drag=function(L,K,J){if(K){this.bind("dragstart",L)}if(J){this.bind("dragend",J)}return !L?this.trigger("drag"):this.bind("drag",K?K:L)};var A=E.event,B=A.special,F=B.drag={not:":input",distance:0,which:1,dragging:false,setup:function(J){J=E.extend({distance:F.distance,which:F.which,not:F.not},J||{});J.distance=I(J.distance);A.add(this,"mousedown",H,J);if(this.attachEvent){this.attachEvent("ondragstart",D)}},teardown:function(){A.remove(this,"mousedown",H);if(this===F.dragging){F.dragging=F.proxy=false}G(this,true);if(this.detachEvent){this.detachEvent("ondragstart",D)}}};B.dragstart=B.dragend={setup:function(){},teardown:function(){}};function H(L){var K=this,J,M=L.data||{};if(M.elem){K=L.dragTarget=M.elem;L.dragProxy=F.proxy||K;L.cursorOffsetX=M.pageX-M.left;L.cursorOffsetY=M.pageY-M.top;L.offsetX=L.pageX-L.cursorOffsetX;L.offsetY=L.pageY-L.cursorOffsetY}else{if(F.dragging||(M.which>0&&L.which!=M.which)||E(L.target).is(M.not)){return }}switch(L.type){case"mousedown":E.extend(M,E(K).offset(),{elem:K,target:L.target,pageX:L.pageX,pageY:L.pageY});A.add(document,"mousemove mouseup",H,M);G(K,false);F.dragging=null;return false;case !F.dragging&&"mousemove":if(I(L.pageX-M.pageX)+I(L.pageY-M.pageY)<M.distance){break}L.target=M.target;J=C(L,"dragstart",K);if(J!==false){F.dragging=K;F.proxy=L.dragProxy=E(J||K)[0]}case"mousemove":if(F.dragging){J=C(L,"drag",K);if(B.drop){B.drop.allowed=(J!==false);B.drop.handler(L)}if(J!==false){break}L.type="mouseup"}case"mouseup":A.remove(document,"mousemove mouseup",H);if(F.dragging){if(B.drop){B.drop.handler(L)}C(L,"dragend",K)}G(K,true);F.dragging=F.proxy=M.elem=false;break}return true}function C(M,K,L){M.type=K;var J=E.event.handle.call(L,M);return J===false?false:J||M.result}function I(J){return Math.pow(J,2)}function D(){return(F.dragging===false)}function G(K,J){if(!K){return }K.unselectable=J?"off":"on";K.onselectstart=function(){return J};if(K.style){K.style.MozUserSelect=J?"":"none"}}})(jQuery);
+</script>
+<script type="text/javascript" >
+(function($){$.fn.touchSlider=function(settings){settings.supportsCssTransitions=(function(style){var prefixes=["Webkit","Moz","Ms"];for(var i=0,l=prefixes.length;i<l;i++){if(typeof style[prefixes[i]+"Transition"]!=="undefined"){return true}}return false})(document.createElement("div").style);settings=jQuery.extend({roll:true,flexible:false,btn_prev:null,btn_next:null,paging:null,speed:75,view:1,range:0.15,page:1,transition:false,initComplete:null,counter:null,multi:false},settings);var opts=[];opts=$.extend({},$.fn.touchSlider.defaults,settings);return this.each(function(){$.fn.extend(this,touchSlider);var _this=this;this.opts=opts;this._view=this.opts.view;this._speed=this.opts.speed;this._tg=$(this);this._list=this._tg.children().children();this._width=parseInt(this._tg.css("width"));this._item_w=parseInt(this._list.css("width"));this._len=this._list.length;this._range=this.opts.range*this._width;this._pos=[];this._start=[];this._startX=0;this._startY=0;this._left=0;this._top=0;this._drag=false;this._scroll=false;this._btn_prev;this._btn_next;this.init();$(this).bind("touchstart",this.touchstart).bind("touchmove",this.touchmove).bind("touchend",this.touchend).bind("dragstart",this.touchstart).bind("drag",this.touchmove).bind("dragend",this.touchend);$(window).bind("orientationchange resize",function(){_this.resize(_this)})})};var touchSlider={init:function(){var _this=this;$(this).children().css({"width":this._width+"px","overflow":"visible"});if(this.opts.flexible){this._item_w=this._width/this._view}if(this.opts.roll){this._len=Math.ceil(this._len/this._view)*this._view}var page_gap=(this.opts.page>1&&this.opts.page<=this._len)?(this.opts.page-1)*this._item_w:0;for(var i=0;i<this._len;++i){this._pos[i]=this._item_w*i-page_gap;this._start[i]=this._pos[i];this._list.eq(i).css({"float":"none","display":"block","position":"absolute","top":"0","left":this._pos[i]+"px","width":this._item_w+"px"});if(this.opts.supportsCssTransitions&&this.opts.transition){this._list.eq(i).css({"-moz-transition":"0ms","-moz-transform":"","-ms-transition":"0ms","-ms-transform":"","-webkit-transition":"0ms","-webkit-transform":"","transition":"0ms","transform":""})}}if(this.opts.btn_prev&&this.opts.btn_next){this.opts.btn_prev.bind("click",function(){_this.animate(1,true);return false});this.opts.btn_next.bind("click",function(){_this.animate(-1,true);return false})}if(this.opts.paging){$(this._list).each(function(i,el){var btn_page=_this.opts.paging.eq(i);btn_page.bind("click",function(e){_this.go_page(i,e);return false})})}this.counter();this.initComplete()},initComplete:function(){if(typeof(this.opts.initComplete)=="function"){this.opts.initComplete(this)}},resize:function(e){if(e.opts.flexible){var tmp_w=e._item_w;e._width=parseInt(e._tg.css("width"));e._item_w=e._width/e._view;e._range=e.opts.range*e._width;for(var i=0;i<e._len;++i){e._pos[i]=e._pos[i]/tmp_w*e._item_w;e._start[i]=e._start[i]/tmp_w*e._item_w;e._list.eq(i).css({"left":e._pos[i]+"px","width":e._item_w+"px"});if(this.opts.supportsCssTransitions&&this.opts.transition){e._list.eq(i).css({"-moz-transition":"0ms","-moz-transform":"","-ms-transition":"0ms","-ms-transform":"","-webkit-transition":"0ms","-webkit-transform":"","transition":"0ms","transform":""})}}}this.counter()},touchstart:function(e){if((e.type=="touchstart"&&e.originalEvent.touches.length<=1)||e.type=="dragstart"){this._startX=e.pageX||e.originalEvent.touches[0].pageX;this._startY=e.pageY||e.originalEvent.touches[0].pageY;this._scroll=false;this._start=[];for(var i=0;i<this._len;++i){this._start[i]=this._pos[i]}}},touchmove:function(e){if((e.type=="touchmove"&&e.originalEvent.touches.length<=1)||e.type=="drag"){this._left=(e.pageX||e.originalEvent.touches[0].pageX)-this._startX;this._top=(e.pageY||e.originalEvent.touches[0].pageY)-this._startY;var w=this._left<0?this._left*-1:this._left;var h=this._top<0?this._top*-1:this._top;if(w<h||this._scroll){this._left=0;this._drag=false;this._scroll=true}else{e.preventDefault();this._drag=true;this._scroll=false;this.position(e)}for(var i=0;i<this._len;++i){var tmp=this._start[i]+this._left;if(this.opts.supportsCssTransitions&&this.opts.transition){var trans="translate3d("+tmp+"px,0,0)";this._list.eq(i).css({"left":"","-moz-transition":"0ms","-moz-transform":trans,"-ms-transition":"0ms","-ms-transform":trans,"-webkit-transition":"0ms","-webkit-transform":trans,"transition":"0ms","transform":trans})}else{this._list.eq(i).css("left",tmp+"px")}this._pos[i]=tmp}}},touchend:function(e){if((e.type=="touchend"&&e.originalEvent.touches.length<=1)||e.type=="dragend"){if(this._scroll){this._drag=false;this._scroll=false;return false}this.animate(this.direction());this._drag=false;this._scroll=false}},position:function(d){var gap=this._view*this._item_w;if(d==-1||d==1){this._startX=0;this._start=[];for(var i=0;i<this._len;++i){this._start[i]=this._pos[i]}this._left=d*gap}else{if(this._left>gap){this._left=gap}if(this._left<-gap){this._left=-gap}}if(this.opts.roll){var tmp_pos=[];
+for(var i=0;i<this._len;++i){tmp_pos[i]=this._pos[i]}tmp_pos.sort(function(a,b){return a-b});var max_chk=tmp_pos[this._len-this._view];var p_min=$.inArray(tmp_pos[0],this._pos);var p_max=$.inArray(max_chk,this._pos);if(this._view<=1){max_chk=this._len-1}if(this.opts.multi){if((d==1&&tmp_pos[0]>=0)||(this._drag&&tmp_pos[0]>=100)){for(var i=0;i<this._view;++i,++p_min,++p_max){this._start[p_max]=this._start[p_min]-gap;this._list.eq(p_max).css("left",this._start[p_max]+"px")}}else{if((d==-1&&tmp_pos[0]<=0)||(this._drag&&tmp_pos[0]<=-100)){for(var i=0;i<this._view;++i,++p_min,++p_max){this._start[p_min]=this._start[p_max]+gap;this._list.eq(p_min).css("left",this._start[p_min]+"px")}}}}else{if((d==1&&tmp_pos[0]>=0)||(this._drag&&tmp_pos[0]>0)){for(var i=0;i<this._view;++i,++p_min,++p_max){this._start[p_max]=this._start[p_min]-gap;this._list.eq(p_max).css("left",this._start[p_max]+"px")}}else{if((d==-1&&tmp_pos[max_chk]<=0)||(this._drag&&tmp_pos[max_chk]<=0)){for(var i=0;i<this._view;++i,++p_min,++p_max){this._start[p_min]=this._start[p_max]+gap;this._list.eq(p_min).css("left",this._start[p_min]+"px")}}}}}else{if(this.limit_chk()){this._left=this._left/2}}},animate:function(d,btn_click){if(this._drag||!this._scroll||btn_click){var _this=this;var speed=this._speed;if(btn_click){this.position(d)}var gap=d*(this._item_w*this._view);if(this._left==0||(!this.opts.roll&&this.limit_chk())){gap=0}this._list.each(function(i,el){_this._pos[i]=_this._start[i]+gap;if(_this.opts.supportsCssTransitions&&_this.opts.transition){var transition=speed+"ms";var transform="translate3d("+_this._pos[i]+"px,0,0)";if(btn_click){transition="0ms"}$(this).css({"left":"","-moz-transition":transition,"-moz-transform":transform,"-ms-transition":transition,"-ms-transform":transform,"-webkit-transition":transition,"-webkit-transform":transform,"transition":transition,"transform":transform})}else{$(this).stop();$(this).animate({"left":_this._pos[i]+"px"},speed)}});this.counter()}},direction:function(){var r=0;if(this._left<-(this._range)){r=-1}else{if(this._left>this._range){r=1}}if(!this._drag||this._scroll){r=0}return r},limit_chk:function(){var last_p=parseInt((this._len-1)/this._view)*this._view;return((this._start[0]==0&&this._left>0)||(this._start[last_p]==0&&this._left<0))},go_page:function(i,e){var crt=($.inArray(0,this._pos)/this._view)+1;var cal=crt-(i+1);while(cal!=0){if(cal<0){this.animate(-1,true);cal++}else{if(cal>0){this.animate(1,true);cal--}}}},counter:function(){if(typeof(this.opts.counter)=="function"){var param={total:Math.ceil(this._len/this._view),current:($.inArray(0,this._pos)/this._view)+1};this.opts.counter(param)}}}})(jQuery);
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".main_visual").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+    });
+    
+    $dragBln = false;
+    
+    $(".main_image").touchSlider({
+        flexible : true,
+        speed : 200,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".flicking_con a"),
+        counter : function (e){
+            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+        }
+    });
+    
+    $(".main_image").bind("mousedown", function() {
+        $dragBln = false;
+    });
+    
+    $(".main_image").bind("dragstart", function() {
+        $dragBln = true;
+    });
+    
+    $(".main_image a").click(function(){
+        if($dragBln) {
+            return false;
+        }
+    });
+    
+    timer = setInterval(function(){
+        $("#btn_next").click();
+    }, 5000);
+    
+    $(".main_visual").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        },5000);
+    });
+    
+    $(".main_image").bind("touchstart",function(){
+        clearInterval(timer);
+    }).bind("touchend", function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 5000);
+    });
+    
+});
+</script>
+<script type="text/javascript" rel="script">
+//index javascript
+
+
+
+
+
+
+  function aclose(){
+    document.getElementById("topbanner").style.display="none";
+}
+
+function showpic(li){
+    var pic=li.getElementsByTagName("ul")[0];
+    pic.style.display="block";
+}
+function hidepic(li){
+    var pic=li.getElementsByTagName("ul")[0];
+    pic.style.display="none";
+}
+
+//Ê±¼äÖá
+
+
+
+
+
+
+$(function(){
+    $(".diary-year").addClass("close");
+    $(".diary-year").last().removeClass("close");
+    $(".diary-main .diary-year .diary-list").each(function (e, target) {
+        var $target=  $(target),
+            $ul = $target.find("ul");
+        $target.height($ul.outerHeight()), $ul.css("position", "absolute");
+    });
+
+    $(".diary-main .diary-year>.years>a").click(function (e) {
+        e.preventDefault();
+        $(this).parents(".diary-year").toggleClass("close")
+    });
+})
+
+//Éú»î·ç¾°
+
+
+
+
+
+
+window.onload=function()   //onload ÊÂ¼þ¾ä±ú£¬ÎÄµµ×°ÔØ½áÊøÊ±µ÷ÓÃ
+
+
+    {
+        var tag=document.getElementById("tag").children; //»ñÈ¡TagÏÂµÄli£¬¼´Tag±êÇ©
+
+
+        var content=document.getElementById("tagContent").children; //»ñÈ¡Tag±êÇ©¶ÔÓ¦µÄÄÚÈÝ
+
+
+        content[0].style.display = "block"; //Ä¬ÈÏÏÔÊ¾µÚÒ»¸ö±êÇ©µÄÄÚÈÝ
+
+
+        tag[0].className="current";
+        var len= tag.length;
+        for(var i=0; i<len; i++)   //ÎÞÂÛµã»÷Ë­¶¼ÄÜÊµÏÖµ±Ç°ÏÔÊ¾£¬ÆäÓàÒþ²Ø
+
+
+        {
+            tag[i].index=i; //ÎªºÎÈç´Ë£¿£¨¿´ÏÂÃæ½âÊÍ£©
+
+
+            tag[i].onclick = function()     //0¼¶DOMµÄÊÂ¼þ¾ä±ú×¢²á
+
+
+            {
+                for(var n=0; n<len; n++)
+                {
+                    tag[n].className="";
+                    content[n].style.display="none";
+                }   //Ê×ÏÈ½«È«²¿µÄdivÒþ²Ø
+
+
+                tag[this.index].className = "current";
+                content[this.index].style.display = "block";
+            }
+        }
+    }
+$(function(){
+    $(".lifecon1 .life-pic").mouseenter(function(){
+        n=$(this).index();
+        $(".lifecon1 .life-pic li").eq(n-1).slideDown(100);
+    })
+    $(".lifecon1 .life-pic").mouseleave(function(){
+        n=$(this).index();
+        $(".lifecon1 .life-pic li").eq(n-1).slideUp(100);
+    })
+    $(".lifecon2 .life-pic").mouseenter(function(){
+        n=$(this).index();
+        $(".lifecon2 .life-pic li").eq(n-1).slideDown(100);
+    })
+    $(".lifecon2 .life-pic").mouseleave(function(){
+        n=$(this).index();
+        $(".lifecon2 .life-pic li").eq(n-1).slideUp(100);
+    })
+    $(".lifecon3 .life-pic").mouseenter(function(){
+        n=$(this).index();
+        $(".lifecon3 .life-pic li").eq(n-1).slideDown(100);
+    })
+    $(".lifecon3 .life-pic").mouseleave(function(){
+        n=$(this).index();
+        $(".lifecon3 .life-pic li").eq(n-1).slideUp(100);
+    })
+    $(".lifecon4 .life-pic").mouseenter(function(){
+        n=$(this).index();
+        $(".lifecon4 .life-pic li").eq(n-1).slideDown(100);
+    })
+    $(".lifecon4 .life-pic").mouseleave(function(){
+        n=$(this).index();
+        $(".lifecon4 .life-pic li").eq(n-1).slideUp(100);
+    })
+    $(".lifecon5 .life-pic").mouseenter(function(){
+        n=$(this).index();
+        $(".lifecon5 .life-pic li").eq(n-1).slideDown(100);
+    })
+    $(".lifecon5 .life-pic").mouseleave(function(){
+        n=$(this).index();
+        $(".lifecon5 .life-pic li").eq(n-1).slideUp(100);
+    })
+})
+
+$(function(){
+    $(window).scroll(function() {
+        if($(window).scrollTop() >= 100){
+            $('.totop').fadeIn(300);
+        }else{
+            $('.totop').fadeOut(300);
+        }
+    });
+    $('.totop').click(function(){$('html,body').animate({scrollTop: '0px'}, 1000);}); //»ð¼ý¶¯»­Í£ÁôÊ±¼ä£¬Ô½Ð¡ÏûÊ§µÄÔ½¿ì~
+
+
+});  
+
+//date javascript
+
+
+
+
+
+
+setInterval(function(){
+    var thisdate=document.getElementById("footer");
+    var mydate=new Date();
+    var year=mydate.getFullYear();
+    var month=mydate.getMonth()+1;
+    var day=mydate.getDate();
+    var week="星期"+"日一二三四五六".charAt(mydate.getDay());
+    var minute=mydate.getMinutes();
+    var hour=mydate.getHours();
+    if(minute<10) minute="0"+minute;
+    var second=mydate.getSeconds();
+    if(second<10) second="0"+second;
+    if(document.getElementById("footer")){
+        thisdate.innerHTML=year+"年"+month+"月"+day+"日"+week+hour+":"+minute+":"+second;
+    }
+},100);
+//script javascript
+
+
+
+
+
+
+(function($) {
+    $.fn.extend({
+        IMGDEMO:function(opt) {
+            
+            var opt     = arguments[0] ? arguments[0] :false;
+            var $button = $(this).children("li")    ;           //容器;
+
+
+            var $sec    = 3000                      ;           //自动播放默认时间;
+
+
+            var $min    = $button.last().width()    ;           //最小宽度;
+
+
+            var $max    = $button.first().width()   ;           //最大宽度;
+
+
+            var $index  = 1                         ;           //轮播开始索引号;
+
+
+            
+            $default = {                                        //默认参数;
+
+
+                speed   :   opt.speed   ?   opt.speed                       :   "slow"  ,
+                by      :   opt.by      ?   opt.by                          :   "click" ,
+                auto    :   opt.auto    ?   opt.auto                        :   false   ,
+                sec     :   opt.sec     ?   opt.sec < 1000 ? 1000 : opt.sec :   $sec    ,
+                maxWidth:   $max                                                        ,
+                minWidth:   $min                                                        ,
+                index   :   $index
+            };            
+            $button.bind($default.by, this.run).autoPlay();     //绑定事件;
+
+
+        },
+        run:function() {                                        //运行方法;
+
+
+            var $obj = $(this);
+            if ($obj.width() == $default.minWidth) {
+                var timeDo = window.setTimeout(function() {
+                    $default.index = $obj.index();
+                    $obj.anim();
+                }, 100);
+                $obj.mouseout(function() {
+                    window.clearTimeout(timeDo);
+                });
+            }
+        },
+        autoPlay:function() {                                   //自动播放;
+
+
+            if ($default.auto) {
+                var $this = $(this);
+                $this.autoDo();
+                $this.mouseover(function() {
+                    window.clearInterval(timeL);
+                });
+                $this.mouseout(function() {
+                    $this.autoDo();
+                });
+            }
+        },
+        autoDo:function() {                                     //播放方法;
+
+
+            var $len    =   $(this).length - 1;
+            var $this   =   $(this);
+                timeL   =   window.setInterval(function() {
+                                $this.eq($default.index).anim();
+                                $default.index < $len ? $default.index++ :$default.index = 0;
+                            }, $default.sec);
+        },
+        anim:function() {                                       //动画方法;
+
+
+            var $fx = function() {
+                $(this).siblings("li").animate({
+                    width   :   $default.minWidth,
+                    opacity :   0.8
+                }, $default.speed).css("cursor", "pointer");
+                $(this).animate({
+                    width   :   $default.maxWidth,
+                    opacity :   1
+                }, $default.speed).css("cursor", "default");
+                
+                $(this).siblings("li").children("div").fadeOut();
+                $(this).children("div").fadeTo($default.speed,0.7);
+                $(this).dequeue();
+            };
+            $(this).queue($fx);
+        }
+    });
+})(jQuery);
+$(document).ready(function(e){
+    var opt =   {
+        "speed" :   "slow"      ,   //变换速度,三速度可选 slow,normal,fast;
+
+
+        "by"    :   "click"     ,   //触发事件,click或者mouseover;
+
+
+        "auto"  :   true        ,   //是否自动播放;
+
+
+        "sec"   :   4000            //自动播放间隔;
+
+
+    };
+    $("#demo").IMGDEMO(opt);
+});
+
+</script>
+</body>
+</html>

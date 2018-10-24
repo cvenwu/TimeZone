@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML5 Canvas雨滴下落动画DEMO演示2</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style media="screen">
+           body {
+                color:#C0C0C0;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 2000px;
+            }
+        </style>
+        <script src="js/rainyday.min.js"></script>
+        <script>
+            function run() {
+                var image = document.getElementById('background');
+                image.onload = function() {
+                    var engine = new RainyDay({
+                        image: this
+                    });
+                    engine.rain([ [3, 2, 2] ], 100);
+                };
+                image.crossOrigin = 'anonymous';
+                image.src = 'css/2.jpg';
+            }
+        </script>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body onload="run();">
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+<p>工具类    地址<br>前端人的俱乐部    <a href="http://f2er.club/">http://f2er.club/</a> 真可以解放你的收藏夹<br>如何优雅地使用Sublime Text    <a href="http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#">http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#</a><br>新编码神器Atom使用纪要    <a href="http://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/">http://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/</a><br>css sprite 雪碧图制作    <a href="http://www.imooc.com/learn/93">http://www.imooc.com/learn/93</a><br>版本控制入门 – 搬进 Github    <a href="http://www.imooc.com/learn/390">http://www.imooc.com/learn/390</a><br>Grunt-beginner前端自动化工具    <a href="http://www.imooc.com/learn/30">http://www.imooc.com/learn/30</a><br>IntelliJ IDEA 简体中文专题教程    <a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial">https://github.com/judasn/IntelliJ-IDEA-Tutorial</a><br>Webstorm,InterllIdea,Phpstorm    <a href="http://t.cn/8kZZ1Uy">http://t.cn/8kZZ1Uy</a><br>SublimeText    <a href="https://github.com/jikeytang/sublime-text">https://github.com/jikeytang/sublime-text</a><br>Atom    <a href="https://atom.io">https://atom.io</a><br>visual studio code    <a href="https://code.visualstudio.com">https://code.visualstudio.com</a><br>综合效果搜索平台</p>
+<p>综合效果搜索平台    地址<br>zoommyapp.com    <a href="http://zoommyapp.com/">http://zoommyapp.com/</a> 高质量图库<br>unsplash.com    <a href="https://unsplash.com/">https://unsplash.com/</a> 高质量图库<br>www.pinterest.com    <a href="https://www.pinterest.com/">https://www.pinterest.com/</a> 图库<br>New Old Stock    <a href="http://nos.twnsnd.co">http://nos.twnsnd.co</a> 复古风图库<br>效果网    <a href="http://www.jq22.com">http://www.jq22.com</a><br>花瓣网    <a href="http://huaban.com/">http://huaban.com/</a><br>优美图    <a href="http://www.topit.me/">http://www.topit.me/</a><br>codepen    <a href="http://codepen.io/">http://codepen.io/</a><br>17素材    <a href="http://www.17sucai.com">http://www.17sucai.com</a><br>摄图网    <a href="http://699pic.com/">http://699pic.com/</a><br>常用的JavaScript代码片段    <a href="http://microjs.com">http://microjs.com</a><br>周报类</p>
+<p>周报类    地址<br>奇舞周刊    <a href="http://old.75team.com/weekly/">http://old.75team.com/weekly/</a><br>码农周刊    <a href="http://weekly.manong.io">http://weekly.manong.io</a><br>WEB前端开发    <a href="http://www.css88.com">http://www.css88.com</a><br>A JS tip per day!    <a href="http://www.jstips.co">http://www.jstips.co</a><br>平安科技移动开发二队技术周报    <a href="https://github.com/PaicHyperionDev/MobileDevWeekly">https://github.com/PaicHyperionDev/MobileDevWeekly</a><br>开发中心</p>
+<p>开发中心    地址<br>mozilla js参考    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript</a><br><a href="https://developer.chrome.com/extensions/api_index.html">https://developer.chrome.com/extensions/api_index.html</a><br>safari开发中心    <a href="https://developer.apple.com/library/safari/navigation">https://developer.apple.com/library/safari/navigation</a><br>microsoft js参考    <a href="https://msdn.microsoft.com/zh-cn/library/d1et7k7c(v=vs.94.aspx">https://msdn.microsoft.com/zh-cn/library/d1et7k7c(v=vs.94.aspx</a><br>js秘密花园    <a href="http://sanshi.me/articles/JavaScript-Garden-CN/html/index.html">http://sanshi.me/articles/JavaScript-Garden-CN/html/index.html</a><br>js秘密花园    <a href="http://bonsaiden.github.io/JavaScript-Garden/zh">http://bonsaiden.github.io/JavaScript-Garden/zh</a><br>w3help    <a href="http://www.w3help.org">http://www.w3help.org</a> 综合Bug集合网站<br>Nodejs</p>
+<p>Nodejs    地址<br>nodejs 篇幅比较巨大    <a href="http://liuqing.pw">http://liuqing.pw</a><br><strong>nodejs开发大全    <a href="http://www.hubwiz.com/course/?type=nodes/strong">http://www.hubwiz.com/course/?type=nodes</a></strong><br>Node.js 包教不包会    <a href="https://github.com/alsotang/node-lessons">https://github.com/alsotang/node-lessons</a><br>篇幅比较少    <a href="http://www.rainweb.cn/article/category/Nodejs">http://www.rainweb.cn/article/category/Nodejs</a><br>node express 入门教程    <a href="http://www.w3cfuns.com/article-5598538-1-1.html">http://www.w3cfuns.com/article-5598538-1-1.html</a><br>nodejs定时任务    <a href="http://my.oschina.net/u/568264/blog/193773">http://my.oschina.net/u/568264/blog/193773</a><br>一个nodejs博客    <a href="http://60sky.com">http://60sky.com</a><br>【NodeJS 学习笔记04】新闻发布系统    <a href="http://www.cnblogs.com/yexiaochai/p/3536547.html">http://www.cnblogs.com/yexiaochai/p/3536547.html</a><br>过年7天乐，学nodejs 也快乐    <a href="http://www.cnblogs.com/qqloving/p/3541099.html">http://www.cnblogs.com/qqloving/p/3541099.html</a><br>七天学会NodeJS    <a href="https://github.com/nqdeng/7-days-nodejs">https://github.com/nqdeng/7-days-nodejs</a><br>Nodejs学习笔记（二）—- 事件模块    <a href="http://www.cnblogs.com/zhongweiv/p/nodejs_events.html">http://www.cnblogs.com/zhongweiv/p/nodejs_events.html</a><br>nodejs入门    <a href="http://www.cnblogs.com/liusuqi/p/3735491.html">http://www.cnblogs.com/liusuqi/p/3735491.html</a><br>angularjs nodejs    <a href="https://github.com/zensh/jsgen">https://github.com/zensh/jsgen</a><br>从零开始nodejs系列文章    <a href="http://blog.fens.me/series-nodejs">http://blog.fens.me/series-nodejs</a><br>理解nodejs    <a href="http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb">http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb</a><br>nodejs事件轮询    <a href="http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop">http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop</a><br>node入门    <a href="http://www.nodebeginner.org/index-zh-cn.html">http://www.nodebeginner.org/index-zh-cn.html</a><br>nodejs cms    <a href="http://ourjs.com/detail/53e1f281c5910a9806000001">http://ourjs.com/detail/53e1f281c5910a9806000001</a><br>Node初学者入门，一本全面的NodeJS教程    <a href="http://ourjs.com/detail/529ca5950cb6498814000005">http://ourjs.com/detail/529ca5950cb6498814000005</a><br>NodeJS的代码调试和性能调优    <a href="http://www.barretlee.com/blog/2015/10/07/debug-nodejs-in-command-line">http://www.barretlee.com/blog/2015/10/07/debug-nodejs-in-command-line</a><br>综合API</p>
+
+		</header>
+		
+	</div>
+	<img id="background" alt="background" src="" />
+</body>
+</html>
